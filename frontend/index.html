@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>JARVIS AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <div class="orb-small"></div>
+            <div>
+                <div class="title">JARVIS</div>
+                <div class="status" id="status">ONLINE • READY</div>
+            </div>
+        </div>
+        <button type="button" class="settings-btn" id="settingsBtn">⚙️</button>
+    </header>
+
+    <!-- CHAT -->
+    <main id="chatBox"></main>
+
+    <!-- BOTTOM -->
+    <div class="bottom">
+        <div class="controls">
+            <button type="button" class="control-btn" id="voiceButton">🔊 Voice ON</button>
+            <button type="button" class="control-btn" id="stopButton">🔇 Stop</button>
+            <button type="button" class="control-btn" id="clearButton">🗑 Clear</button>
+        </div>
+
+        <div class="input-area">
+            <input id="userInput" type="text" autocomplete="off" placeholder="Talk to JARVIS...">
+            <button type="button" class="send-btn" id="sendButton">➤</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- SETTINGS -->
+<div class="settings-overlay" id="settingsOverlay">
+    <div class="settings-panel">
+        <div class="settings-title">
+            <h2>⚙️ JARVIS Settings</h2>
+            <button type="button" class="close-settings" id="closeSettingsBtn">✕</button>
+        </div>
+
+        <!-- VOICE -->
+        <div class="setting">
+            <div class="setting-title">🔊 Voice</div>
+            <div class="setting-desc">Enable or disable JARVIS voice responses.</div>
+            <div class="setting-row">
+                <span>Voice enabled</span>
+                <input type="checkbox" id="voiceToggle" checked>
+            </div>
+        </div>
+
+        <!-- SPEED -->
+        <div class="setting">
+            <div class="setting-title">⚡ Voice Speed</div>
+            <div class="setting-desc">Adjust JARVIS speaking speed.</div>
+            <input type="range" id="voiceSpeed" min="0.5" max="1.5" step="0.05" value="0.95">
+            <div id="voiceSpeedValue">0.95x</div>
+        </div>
+
+        <!-- LANGUAGE -->
+        <div class="setting">
+            <div class="setting-title">🌐 Voice Language</div>
+            <div class="setting-desc">Choose the speech language.</div>
+            <select id="voiceLanguage">
+                <option value="en-IN">English India</option>
+                <option value="en-US">English USA</option>
+                <option value="en-GB">English UK</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="te-IN">Telugu</option>
+            </select>
+        </div>
+
+        <!-- MEMORY -->
+        <div class="setting">
+            <div class="setting-title">🧠 Memory</div>
+            <div class="setting-desc">Save conversations in this browser.</div>
+            <div class="setting-row">
+                <span>Memory enabled</span>
+                <input type="checkbox" id="memoryToggle" checked>
+            </div>
+        </div>
+
+        <!-- TEST VOICE -->
+        <button type="button" class="test-voice-btn" id="testVoiceButton">▶ Test JARVIS Voice</button>
+
+        <!-- CLEAR MEMORY -->
+        <button type="button" class="danger-btn" id="clearMemoryButton">🗑️ Clear JARVIS Memory</button>
+    </div>
+</div>
+
+<div id="errorBox"></div>
+
+<script src="script.js"></script>
+</body>
+              </html>
+                                              
